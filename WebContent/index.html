@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<title>BreakBreakBeats</title>
+<script type="text/javascript" src="./js/amen.js"></script>
+<style type="text/css">  
+ 
+    td.rt{ text-align: right; } 
+ 
+</style> 
+</head>
+<body>
+	<p>
+		<SELECT id="samplelist" onchange="selectSample(this);">
+			<OPTION value="cw_amen01_175">cw_amen01_175.wav</OPTION>
+			<OPTION value="cw_amen02_165">cw_amen02_165.wav</OPTION>
+			<OPTION value="cw_amen03_167">cw_amen03_167.wav</OPTION>
+			<OPTION value="cw_amen04_170">cw_amen04_170.wav</OPTION>
+			<OPTION value="cw_amen05_158">cw_amen05_158.wav</OPTION>
+			<OPTION value="cw_amen06_169">cw_amen06_169.wav</OPTION>
+			<OPTION value="cw_amen07_172">cw_amen07_172.wav</OPTION>
+			<OPTION value="cw_amen08_165">cw_amen08_165.wav</OPTION>
+		</SELECT>
+	</p>
+	<table>
+		<tr>
+			<th colspan="2">BreakBreakBeats</th>
+		</tr>
+		<tr>
+			<td class="rt">DrumRoll
+			<td>
+			<td><input type="range" min="0" max="100" value="30" id="roll"
+				onchange="eff.setRoll(this.value);">
+			<td>
+		</tr>
+		<tr>
+			<td class="rt">Randomize
+			<td>
+			<td><input type="range" min="0" max="100" value="20" id="randomize"
+				onchange="eff.setWarp(this.value);">
+			<td>
+		</tr>
+		<tr>
+			<td class="rt">Reverse
+			<td>
+			<td><input type="range" min="0" max="100" value="10" id="reverse"
+				onchange="eff.setReverse(this.value);">
+			<td>
+		</tr>
+		<tr>
+			<td class="rt">Mute
+			<td>
+			<td><input type="range" min="0" max="100" value="5" id="mute"
+				onchange="eff.setImpulse(this.value);">
+			<td>
+		</tr>
+		<tr>
+			<td class="rt">BPM
+			<td>
+			<td><input type="range" id="bpmslider" min="50" max="150" value="100"
+				onchange="changeBPM(this.value);">
+			<td>
+			<td>
+			<span id="bpm"></span>
+			</td>
+			<td>
+			<button onclick="changeBPM(100);document.getElementById('bpmslider').value=100;">Reset</button>
+			</td>
+		</tr>
+		<tr>
+			<td class="rt">Gain
+			<td>
+			<td><input type="range" min="0" max="100" value="100"
+				onchange="setGain(this.value);">
+			<td>
+		</tr>
+	</table>
+	
+	
+
+	<p>&copy; OXXXIDE 2016</p>
+	<p>
+		The WAV Resources by <a href="http://rhythm-lab.com/amen_breaks/"
+			target="blank">Rhythm Lab</a>
+	</p>
+</body>
+</html>
